@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "lobsterregular";
+  src: url("../fonts/lobster-regular-webfont.woff2") format("woff2"), url("../fonts/lobster-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "latoregular";
+  src: url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "latoregular";
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: white;
+}
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-toggler {
+  border-color: #fff;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.hamburger {
+  position: relative;
+  top: 12px;
+  display: block;
+  padding: 5px 0 2px;
+}
+.hamburger .hamburger-box {
+  display: block;
+  width: 40px;
+  height: 31px;
+}
+.hamburger .hamburger-inner,
+.hamburger .hamburger-inner::after,
+.hamburger .hamburger-inner::before {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.hamburger .hamburger-inner::before {
+  content: "";
+  top: -12px;
+}
+.hamburger .hamburger-inner::after {
+  content: "";
+  bottom: -9px;
+}
+
+.home-header {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.home-header .inside {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-header .site-logo {
+  height: 250px;
+  vertical-align: middle;
+}
+.home-header .quote {
+  font-family: "lobsterregular";
+  font-size: 4em;
+  color: #fff;
+  padding: 0.25em 0.75em;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+.content-blocks {
+  position: relative;
+}
+.content-blocks h1 {
+  padding: 1em 0;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+  background-color: black;
+  color: #fff;
+  margin-top: 2em;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=default.css.map */

@@ -1,0 +1,71 @@
+@mixin background-blur($blur-radius: 5px) {
+    backdrop-filter: blur($blur-radius);
+}
+
+@mixin text-color($opacity: 1.0) {
+    color: rgba($color: #fff, $alpha: $opacity)
+}
+
+.navbar {
+    @include background-blur(10px);
+    background-color: rgba($color: #000, $alpha: 0.7);
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-nav {
+
+    .nav-link.active,
+    .nav-link:hover {
+        @include text-color();
+    }
+
+    .nav-link {
+        @include text-color(0.7);
+    }
+}
+
+.navbar-toggler {
+    border-color: #fff;
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba($color: #fff, $alpha: 0.5);
+    }
+}
+
+.hamburger {
+    position: relative;
+    top: 12px;
+    display: block;
+    padding: 5px 0 2px;
+
+    .hamburger-box {
+        display: block;
+        width: 40px;
+        height: 31px;
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 3px;
+
+        border-radius: 50px;
+        background-color: #fff;
+    }
+
+    .hamburger-inner::before {
+        content: '';
+        top: -12px;
+    }
+
+    .hamburger-inner::after {
+        content: '';
+        bottom: -9px;
+    }
+}

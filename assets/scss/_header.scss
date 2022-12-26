@@ -1,0 +1,36 @@
+@mixin background-blur($blur-radius: 5px) {
+    backdrop-filter: blur($blur-radius);
+}
+
+@mixin shadow($x: 0, $y: 0, $blur: 15px, $spread: 5px) {
+    box-shadow: $x $y $blur $spread rgba($color: #000000, $alpha: 0.5);
+}
+
+.home-header {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    .inside {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .site-logo {
+        height: 250px;
+        vertical-align: middle;
+    }
+
+    .quote {
+        font-family: 'lobsterregular';
+        font-size: 4em;
+        color: #fff;
+        padding: 0.25em 0.75em;
+        text-shadow: 0 0 7px rgba($color: #000000, $alpha: 0.5);
+    }
+}
