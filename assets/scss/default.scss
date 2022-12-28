@@ -1,10 +1,10 @@
-@use 'variables';
-@use 'fonts';
-@use 'base';
-@use 'navbar';
-@use 'header';
-@use 'content-blocks';
-@use 'footer';
+@import 'variables';
+@import 'fonts';
+@import 'base';
+@import 'navbar';
+@import 'header';
+@import 'content-blocks';
+@import 'footer';
 
 html,
 body {
