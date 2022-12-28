@@ -1,71 +1,62 @@
-@mixin background-blur($blur-radius: 5px) {
-    backdrop-filter: blur($blur-radius);
-}
-
-@mixin text-color($opacity: 1.0) {
-    color: rgba($color: #fff, $alpha: $opacity)
-}
-
 .navbar {
-    @include background-blur(10px);
-    background-color: rgba($color: #000, $alpha: 0.7);
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  @include background-blur(10px);
 }
 
 .navbar-brand img {
-    height: 50px;
+  height: 50px;
 }
 
 .navbar-nav {
 
-    .nav-link.active,
-    .nav-link:hover {
-        @include text-color();
-    }
+  .nav-link.active,
+  .nav-link:hover {
+    @include text-color();
+  }
 
-    .nav-link {
-        @include text-color(0.7);
-    }
+  .nav-link {
+    @include text-color(0.7);
+  }
 }
 
 .navbar-toggler {
-    border-color: #fff;
+  border-color: #ffffff;
 
-    &:focus {
-        box-shadow: 0 0 0 3px rgba($color: #fff, $alpha: 0.5);
-    }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($color: #ffffff, $alpha: 0.5);
+  }
 }
 
 .hamburger {
-    position: relative;
-    top: 12px;
+  position: relative;
+  top: 12px;
+  display: block;
+  padding: 5px 0 2px;
+
+  .hamburger-box {
     display: block;
-    padding: 5px 0 2px;
+    width: 40px;
+    height: 31px;
+  }
 
-    .hamburger-box {
-        display: block;
-        width: 40px;
-        height: 31px;
-    }
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #ffffff;
+  }
 
-    .hamburger-inner,
-    .hamburger-inner::after,
-    .hamburger-inner::before {
-        position: relative;
-        display: block;
-        width: 40px;
-        height: 3px;
+  .hamburger-inner::before {
+    top: -12px;
+    content: "";
+  }
 
-        border-radius: 50px;
-        background-color: #fff;
-    }
-
-    .hamburger-inner::before {
-        content: '';
-        top: -12px;
-    }
-
-    .hamburger-inner::after {
-        content: '';
-        bottom: -9px;
-    }
+  .hamburger-inner::after {
+    bottom: -9px;
+    content: "";
+  }
 }

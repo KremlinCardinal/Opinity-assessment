@@ -1,0 +1,11 @@
+@mixin background-blur($blur-radius: 5px) {
+    backdrop-filter: blur($blur-radius);
+}
+
+@mixin background-blur($blur-radius: 5px) {
+    backdrop-filter: blur($blur-radius);
+}
+
+@mixin text-color($opacity: 1.0) {
+    color: rgba($color: #ffffff, $alpha: $opacity);
+}
